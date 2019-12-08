@@ -1,4 +1,4 @@
-import { AppPage } from './app.po';
+import { AppPage } from './dashboard.po';
 import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
@@ -10,7 +10,12 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to Newshore!');
+    expect(page.getTitleText()).toEqual('Welcome to Newshore MSE solution!');
+  });
+
+  it('should container some house tiles', () => {
+    page.navigateTo();
+    expect(page.getHouseTilesCount()).toBeGreaterThan(0);
   });
 
   afterEach(async () => {

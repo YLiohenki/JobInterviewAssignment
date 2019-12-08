@@ -1,0 +1,10 @@
+@import "../../styles.scss";
+:host {
+  .character-grid-container,
+  .sorting-strategy-grid-container {
+    @include grid-container;
+    & > li {
+      @include grid-element;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../../styles.scss";
+:host {
+  @include tile;
+  height: 200px;
+  position: relative;
+
+  ::ng-deep .blood-type-icon  {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+  }
+}

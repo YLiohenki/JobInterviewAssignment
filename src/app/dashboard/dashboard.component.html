@@ -1,0 +1,6 @@
+<ul class="house-grid-container" *ngIf="!loadingError">
+  <li *ngFor="let house of houseTileDataList">
+    <app-house-tile [house]="house" [routerLink]="['/houses', house.id]"></app-house-tile>
+  </li>
+</ul>
+<app-retry *ngIf="loadingError" (retry)="retry()"></app-retry>

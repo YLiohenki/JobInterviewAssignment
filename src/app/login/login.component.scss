@@ -1,0 +1,7 @@
+@import "../../styles.scss";
+
+:host {
+  .form-container {
+    @include form-container;
+  }
+}

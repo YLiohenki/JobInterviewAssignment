@@ -1,0 +1,42 @@
+<a [routerLink]="['/dashboard']">Link to dashboard</a>
+<br />
+<div class="form-container">
+<form *ngIf="!loadingError && characterFormData != null" [formGroup]="characterForm">
+  <label>
+    Id:
+    <input type="text" formControlName="id" readonly="true">
+  </label>
+  <br />
+  <label>
+    Name:
+    <input type="text" formControlName="name" readonly="true">
+  </label>
+  <br />
+  <label>
+    Role:
+    <input type="text" formControlName="role" readonly="true">
+  </label>
+  <br />
+  <label>
+    House:
+    <input type="text" formControlName="house" readonly="true">
+  </label>
+  <br />
+  <label>
+    School:
+    <input type="text" formControlName="school" readonly="true">
+  </label>
+  <br />
+  <label>
+    Order Of The Phoenix:
+    <input type="text" formControlName="orderOfThePhoenix" readonly="true">
+  </label>
+  <br />
+  <label>
+    Dumbledore's Army:
+    <input type="text" formControlName="dumbledoresArmy" readonly="true">
+  </label>
+
+</form>
+</div>
+<app-retry *ngIf="loadingError" (retry)="retry()"></app-retry>

@@ -1,0 +1,9 @@
+@import "../../styles.scss";
+:host {
+  .house-grid-container {
+    @include grid-container;
+    & > li {
+        @include grid-element;
+    }
+  }
+}

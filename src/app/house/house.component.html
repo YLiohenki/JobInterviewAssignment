@@ -1,0 +1,16 @@
+<a [routerLink]="['/dashboard']">Link to dashboard</a>
+<br />
+<div>Filter: <input [ngModel]="nameFilter" (ngModelChange)="nameFilterChange($event)"/></div>
+<br />
+<ul class="sorting-strategy-grid-container" *ngIf="!loadingError">
+    <li *ngFor="let strategy of sortingStrategiesList">
+      <button (click)="changeSortingStrategy(strategy)">{{strategy.name}}</button>
+    </li>
+  </ul>
+<br />
+<ul class="character-grid-container" *ngIf="!loadingError">
+  <li *ngFor="let character of charactersTileDataList">
+    <app-character-tile [character]="character" [routerLink]="['characters', character.id]"></app-character-tile>
+  </li>
+</ul>
+<app-retry *ngIf="loadingError" (retry)="retry()"></app-retry>
