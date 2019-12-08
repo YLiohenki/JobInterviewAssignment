@@ -9,10 +9,10 @@ import {
   CharacterActionTypes
 } from "./actions/character.actions";
 
-export const housesReducer = (
+export function housesReducer(
   state = initialStoreState.houses,
   action: HouseActions
-): EntityWrapper<HouseDto[]> => {
+): EntityWrapper<HouseDto[]> {
   switch (action.type) {
     case HouseActionTypes.FetchHouses:
       return {
@@ -34,10 +34,10 @@ export const housesReducer = (
   }
 };
 
-export const charactersReducer = (
+export function charactersReducer (
   state = initialStoreState.characters,
   action: CharacterAction
-): EntityWrapper<CharacterDto[]> => {
+): EntityWrapper<CharacterDto[]> {
   switch (action.type) {
     case CharacterActionTypes.FetchCharacters:
       return {
